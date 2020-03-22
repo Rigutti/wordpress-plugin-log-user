@@ -16,6 +16,6 @@ function your_function( $user_login, $user )
 
 
   global $wpdb;
-  $result = $wpdb->get_results( "INSERT INTO `JTODB779k_log`( `id_user`,`ip`) VALUES ($IdUtente,\"$ip\")");
+  $result = $wpdb->get_results( "INSERT INTO `wp_log`( `id_user`,`ip`) VALUES ($IdUtente,\"$ip\")");
 }
 add_action('wp_login', 'your_function', 10, 2);
